@@ -1,0 +1,13 @@
+class test {
+  private int x = (234 + 2431324 - true + true);
+  public char e[] = new char[3 * a];
+  private void i() {
+    cout << this.x();
+  }
+}
+
+void kxi2017 main() {
+  test e = new test();
+  e.e[a - 3] = e.e[d * 50 / a];
+  e.i();
+}

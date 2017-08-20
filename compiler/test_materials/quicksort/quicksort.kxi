@@ -1,0 +1,173 @@
+class quicksort {
+    private int size = 5;
+    private element list[] = new element[size];
+    public element e = new element(50);
+    
+    quicksort() {
+	list[0] = new element(3);
+	list[1] = new element(1);
+	list[2] = new element(60);
+	list[3] = new element(2);
+	list[4] = new element(-4);
+    }
+    
+    public void printArray() {
+	int i = 0;
+	void e;
+	while (i < size) {
+	    cout << list[i].getItem();
+	    cout << ' ';
+	    i = i + 1;
+	}
+	cout << '\n';
+	return e;
+    }
+    
+    private int swap(int low, int high) {
+	element pivot = list[low];
+	int i = low - 1;
+	int j = high + 1;
+	element temp = null;
+	bool runLoop;
+	while (true) {
+	    runLoop = true;
+	    while (runLoop) {
+		i = i + 1;
+		if (-1 != list[i].compare(pivot)) {
+		    runLoop = false;
+		}
+	    }
+	    
+	    runLoop = true;
+	    while (runLoop) {
+		j = j - 1;
+		if (1 != list[j].compare(pivot)) {
+		    runLoop = false;
+		}
+	    }
+	    
+	    if (i >= j) {
+		return j;
+	    }
+	    temp = list[i];
+	    list[i] = list[j];
+	    list[j] = temp;
+	}
+    }
+    
+    private void quickSort(int low, int high) {
+	int p;
+	if (low >= high) {
+	    return;
+	}
+	p = swap(low, high);
+	quickSort(low, p);
+	quickSort(p + 1, high);
+    }
+    
+    public void sort() {
+	quickSort(0, size - 1);
+    }
+    
+    public void newList(element list[], int size) {
+	int i = 0;
+	this.size = size;
+	this.list = new element[this.size];
+	while (i < this.size) {
+	    this.list[i] = list[i];
+	    i = i + 1;
+	}
+    }
+    
+    public int getSize() {
+	return size;
+    }
+}
+
+class element {
+    private int item;
+    
+    element(int item) {
+	this.item = item;
+    }
+    
+    public int getItem() {
+	return item;
+    }
+    
+    public void setItem(int item) {
+	this.item = item;
+    }
+    
+    public int compare(element e) {
+	if (item < e.getItem()) {
+	    return -1;
+	} else if (item > e.getItem()) {
+	    return 1;
+	} else {
+	    return 0;
+	}
+    }
+}
+
+class globalFuncs {
+    globalFuncs() {}
+    public int fib(int i) {
+	cout << i;
+	cout << '\n';
+	if (i == 0 or i == 1) {
+	    return i;
+	} else {
+	    return fib(i - 1) + fib(i - 2);
+	}
+    }
+}
+
+void kxi2017 main() {
+    char ee;
+    char z = '0';
+    int zero;
+    element e;
+    globalFuncs g[];
+    int ii;
+    quicksort sorter = new quicksort();
+    element l[] = new element[sorter.getSize() + 5];
+    int i = 0;
+    while (i < sorter.getSize() + 5) {
+	l[i] = new element(sorter.getSize() + 5 - i * 2);
+	while (l[i].getItem() < 20 and l[i].getItem() > -20 and l[i].getItem() != 0) {
+	    l[i] = new element(l[i].getItem() + l[i].getItem());
+	}
+	i = i + 1;
+    }
+    sorter.printArray();
+    sorter.sort();
+    sorter.printArray();
+    
+    sorter.newList(l, sorter.getSize() + 5);
+    sorter.printArray();
+    sorter.sort();
+    sorter.printArray();
+    
+    cout << '\n';
+    cout << sorter.e.getItem();
+    cout << '\n';
+    sorter.e.setItem(60);
+    cout << sorter.e.getItem();
+    cout << '\n';
+    
+    if (g == null and null == g) {
+	cout << '>';
+	cin >> ee;
+	ii = atoi(ee);
+	zero = atoi(z);
+	ii = ii - zero;
+	cout << ii;
+	cout << '\n';
+	cout << g[0].fib(ii);
+	cout << '\n';
+    } else {
+	cout << 'k';
+	cout << '\n';
+    }
+}

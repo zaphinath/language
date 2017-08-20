@@ -1,0 +1,26 @@
+void kxi2017 main() {
+  test();
+  other();
+\\  for (int x = 0; x < 10; x++) {
+  for (int z = 24; z > 0; z--) {
+      bad('a');
+  }
+
+
+
+
+
+
+int[] x = [
+    3,
+    5
+  ];
+  while (true) {
+    waka(asdkfj324, 234).e(b);
+  }
+  if (('a' == 'a' or 'e' == 23) and x[0] >= 4 and x[1] <= 5)) {
+    asdlfna(x, 'e', q.r(e));
+  }
+}
+
+x == 3
